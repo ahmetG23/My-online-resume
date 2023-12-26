@@ -1,6 +1,14 @@
+/* 
+TODOS:
+    - Add media queries
+*/
+:root {
+    --footer-text: rgb(220, 252, 252);
+}
 html, body {
     font-family: 'IBM Plex Sans', sans-serif;
     margin: 0;
+    font-size: 20px;
 }
 
 .outer-page {
@@ -8,7 +16,7 @@ html, body {
     width: 100%;
     justify-content: center;
     
-    background-image: url('./assets/clouds.jpg');;
+    background-image: url('./assets/clouds.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -45,6 +53,7 @@ h2 {
     font-family: 'Sofia', cursive;
     margin-bottom: 0;
     margin-top: 15px;
+    font-weight: 800;
 }
 
 h1 {
@@ -56,9 +65,40 @@ h1 {
 
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(45, 99, 160);
-    color: rgb(181, 241, 245);
-    height: 30px;
+
+    height: 70px;
+    background-color: rgb(112, 49, 122);
+    border-top: 5px solid #646161;
+    color: var(--footer-text);
+}
+i.fab.fa-instagram {
+    font-size: 25px;
+    margin: 0 5px;
+    color: var(--footer-text);
+}
+
+i.fab.fa-linkedin {
+    font-size: 25px;
+    margin: 0 5px;
+    color: var(--footer-text);
+}
+.codeforces {
+    height: 20px;
+    margin: 0 5px;
+}
+footer > p {
+    margin: 0;
+}
+
+@media (max-width: 720px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .page {
+        width: 90%;
+    }
 }
